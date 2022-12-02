@@ -3,7 +3,8 @@
   "scripts": {
     "start": "webpack serve",
     "build": "NODE_ENV=production webpack",
-    "build:dev": "webpack"
+    "build:dev": "webpack",
+    "tailwind:dev": "npx tailwindcss -i ./src/index.css -o ./dist/style.css --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
@@ -11,6 +12,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/runtime": "^7.20.6",
+    "autoprefixer": "^10.4.13",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",

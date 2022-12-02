@@ -1,0 +1,13 @@
+:root {
+  /*----- Fonts -----*/
+  --ff-russo: "Michroma", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-lato: "Lato", sans-serif;
+
+  /*----- Colors -----*/
+  --dark-clr: #001731;
+  --darkMid-clr: #001d3d;
+  --darkLight-clr: #2596be;
+  --accentDark-clr: #ffc300;
+  --accentLight: #ffd60a;
+}

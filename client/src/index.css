@@ -1,3 +1,20 @@
-h1 {
-  color: red;
+@import "./styles/variables.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    height: 100vh;
+    font-family: var(--ff-lato), Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*----- USER INTERFACE -----*/
+  .containerXL {
+    max-width: 1310px;
+    margin: 0 auto;
+    height: 100%;
+  }
 }
