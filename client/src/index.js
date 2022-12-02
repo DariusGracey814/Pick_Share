@@ -1,10 +1,12 @@
-const person = {
-  name: "Naruto Uzimaki",
-};
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const hokage = {
-  ...person,
-  village: "Hidden Leaf",
-};
+import App from "./App";
+import "./index.css";
 
-console.log(hokage);
+// Create app container
+const container = document.getElementById("root");
+// Specify root
+const root = createRoot(container);
+// Render app in root container
+root.render(<App />);
