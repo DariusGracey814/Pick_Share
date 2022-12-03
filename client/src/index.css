@@ -72,7 +72,9 @@
 
   /* Hover Styles */
   .btn-sm:hover,
-  .btn:active {
+  .btn:active,
+  .btn-yellow:active,
+  .btn-yellow:hover {
     background-color: rgba(251, 212, 17, 0.9);
   }
 
