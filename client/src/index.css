@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   body {
     height: 100vh;
     font-family: var(--ff-lato), Arial, Helvetica, sans-serif;
@@ -12,9 +12,4 @@
   }
 
   /*----- USER INTERFACE -----*/
-  .containerXL {
-    max-width: 1310px;
-    margin: 0 auto;
-    height: 100%;
-  }
 }
