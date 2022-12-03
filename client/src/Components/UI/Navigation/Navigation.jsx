@@ -22,8 +22,6 @@ function Navigation() {
   const loginStateHandler = (evt) => {
     evt.preventDefault();
     dispatch(loginStateActions.loginHandler());
-
-    console.log(loginState);
   };
 
   return (
@@ -57,7 +55,9 @@ function Navigation() {
         {/* Navigation List */}
         <ul className={`grid nav-list ${expanded ? "active" : null}`}>
           <li className="btn-sm justify-self-end list">
-            <Link to="/signup">Sign up</Link>
+            <Link to="/signup" onClick={loginStateHandler}>
+              {!loginState ? "Signup" : "Login"}
+            </Link>
           </li>
         </ul>
       </nav>
