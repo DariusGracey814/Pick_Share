@@ -11,5 +11,63 @@
     padding: 0;
   }
 
-  /*----- USER INTERFACE -----*/
+  /*----- TYPOGRAPHY-----*/
+  .russo {
+    font-family: var(--ff-russo);
+  }
+
+  .lato {
+    font-family: var(--ff-lato);
+  }
+
+  /* ----- COLORS ------ */
+  .dark {
+    background-color: var(--dark-clr);
+  }
+
+  .dark-mid {
+    background-color: var(--darkMid-clr);
+  }
+
+  .dark-light {
+    color: var(--darkLight-clr);
+  }
+
+  .accent-dark {
+    color: var(--accentDark-clr);
+  }
+
+  .vibrant {
+    color: var(--vibrant);
+  }
+
+  /* ----- UI ----- */
+  a {
+    cursor: pointer;
+  }
+
+  .btn-sm {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-sm {
+    padding: 0.4em 0.8em;
+    background: var(--accentDark-clr);
+    border-radius: 5px;
+    color: var(--darkMid-clr);
+  }
+
+  /* Hover Styles */
+  .btn-sm:hover,
+  .btn:active {
+    background-color: rgba(251, 212, 17, 0.9);
+  }
+
+  /* ----- Media Queries ------ */
+  @media (max-width: 660px) {
+    header {
+      padding: 0 0.5em;
+    }
+  }
 }

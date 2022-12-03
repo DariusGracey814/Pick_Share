@@ -7,7 +7,8 @@
   /*----- Colors -----*/
   --dark-clr: #001731;
   --darkMid-clr: #001d3d;
-  --darkLight-clr: #2596be;
-  --accentDark-clr: #ffc300;
+  --darkLight-clr: #2795bc;
+  --accentDark-clr: #fbd411;
   --accentLight: #ffd60a;
+  --vibrant: rgba(251, 5, 251, 0.8);
 }
