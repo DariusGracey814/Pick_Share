@@ -1,4 +1,5 @@
 /client/dist
 /client/webpack.config.js
 /client/node_modules
+/client/store
 /server
