@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { loginStateActions } from "../../../../store/inputState";
 
 import logo from "../../../assets/logoIcon.png";
 // Icons
@@ -7,11 +9,21 @@ import { FiMenu } from "react-icons/fi";
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
+  const dispatch = useDispatch();
+  const loginState = useSelector((state) => state.loginState.login);
 
   // Mobile menu click
   const menuActive = (evt) => {
     evt.preventDefault();
     setExpanded((prevState) => !prevState);
+  };
+
+  // Track login and sign up state
+  const loginStateHandler = (evt) => {
+    evt.preventDefault();
+    dispatch(loginStateActions.loginHandler());
+
+    console.log(loginState);
   };
 
   return (
