@@ -4,7 +4,7 @@ import Navigation from "../Navigation/Navigation";
 
 function Header() {
   return (
-    <header>
+    <header className="border border-red-600 py-3">
       <Container>
         <Navigation />
       </Container>
