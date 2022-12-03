@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../../assets/logoIcon.png";
+// Icons
+import { FiMenu } from "react-icons/fi";
 
 function Navigation() {
+  const [expanded, setExpanded] = useState(false);
+
+  // Mobile menu click
+  const menuActive = (evt) => {
+    evt.preventDefault();
+    setExpanded((prevState) => !prevState);
+  };
+
   return (
-    <nav className="grid grid-cols-2 items-center">
+    <div className="grid grid-cols-2 items-center">
       {/* Logo */}
       <Link to="/">
         <div className="flex justify-items-center items-center">
@@ -18,16 +28,28 @@ function Navigation() {
       </Link>
 
       {/* Mobile Menu */}
+      <button
+        className="mobile-menu justify-self-end"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navigationMenu"
+        aria-controls="navigationMenu"
+        aria-expanded={expanded}
+        aria-label="Toggle navigation"
+        onClick={menuActive}
+      >
+        <FiMenu className="text-4xl accent-dark" />
+      </button>
 
-      {/* Navigation List */}
-      <ul className="justify-self-end">
-        <ul>
-          <li className="btn-sm flex justify-content-center items-center">
+      <nav>
+        {/* Navigation List */}
+        <ul className={`grid nav-list ${expanded ? "active" : null}`}>
+          <li className="btn-sm justify-self-end list">
             <Link to="/signup">Sign up</Link>
           </li>
         </ul>
-      </ul>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
