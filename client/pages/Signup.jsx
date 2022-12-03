@@ -1,9 +1,10 @@
 import React from "react";
+import SignUpForm from "../src/Components/UI/Forms/SignupForm";
 
 function SignUp() {
   return (
     <section className="hero">
-      <h1>Sign Up</h1>
+      <SignUpForm />
     </section>
   );
 }

@@ -16,6 +16,10 @@
     color: rgba(255, 255, 255, 0.9) !important;
   }
 
+  .overflow-no {
+    overflow: hidden;
+  }
+
   /*----- TYPOGRAPHY-----*/
   .russo {
     font-family: var(--ff-russo);
