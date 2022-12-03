@@ -1,7 +1,11 @@
 import React from "react";
 
-function Signup() {
-  return <section className="hero">Sign up</section>;
+function SignUp() {
+  return (
+    <section className="hero">
+      <h1>Sign Up</h1>
+    </section>
+  );
 }
 
-export default Signup;
+export default SignUp;

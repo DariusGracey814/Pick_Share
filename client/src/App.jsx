@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./Components/UI/Header/Header";
 import Homepage from "../pages/Homepage";
-import Signup from "../pages/Signup";
+
+// Lazy Load for Optimization
+const SignUpPage = React.lazy(() => import("../pages/SignUp"));
+
 import "./index.css";
 
 function App() {
@@ -16,7 +19,18 @@ function App() {
 
         {/* Home Route */}
         <Route path="/" element={<Homepage />} />
-        <Route path="/signup" element={Signup} />
+        {/* Lazy load sign up form */}
+        <Route
+          path="/pick-share-signup-form"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <SignUpPage />
+            </Suspense>
+          }
+        />
+
+        {/* Redirect to home every other route */}
+        <Route path="*" element={Homepage} />
       </Routes>
     </main>
   );

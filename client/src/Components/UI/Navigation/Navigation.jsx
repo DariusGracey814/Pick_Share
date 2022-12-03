@@ -54,8 +54,11 @@ function Navigation() {
       <nav>
         {/* Navigation List */}
         <ul className={`grid nav-list ${expanded ? "active" : null}`}>
-          <li className="btn-sm justify-self-end list">
-            <Link to="/signup" onClick={loginStateHandler}>
+          <li
+            className="btn-sm justify-self-end list"
+            onClick={loginStateHandler}
+          >
+            <Link to="/pick-share-signup-form">
               {!loginState ? "Signup" : "Login"}
             </Link>
           </li>
