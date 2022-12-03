@@ -5,7 +5,12 @@ import "./index.css";
 function App() {
   return (
     <main>
-      <h1 class="text-3xl text-green-600 font-bold underline">Darius Gracey</h1>
+      <Routes>
+        {/* Header Displays on every page */}
+
+        {/* Home Route */}
+        <Route path="/" element="" />
+      </Routes>
     </main>
   );
 }
