@@ -2,5 +2,5 @@
 /client/webpack.config.js
 /client/node_modules
 /client/store
-/server
-/users
+/client/src/Component/users
+server
