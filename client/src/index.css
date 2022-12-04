@@ -102,6 +102,11 @@
     width: 510px;
   }
 
+  .btn-login2 {
+    width: 125px;
+    margin-right: 1em;
+  }
+
   /* ----- HERO SECTION ------ */
   header,
   .hero {
