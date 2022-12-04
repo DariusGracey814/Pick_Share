@@ -6,6 +6,7 @@ import Homepage from "../pages/Homepage";
 
 // Lazy Load for Optimization
 const SignUpPage = React.lazy(() => import("../pages/SignUp"));
+const ErrorPage = React.lazy(() => import("../pages/ErrorPage"));
 
 import "./index.css";
 
@@ -30,7 +31,14 @@ function App() {
         />
 
         {/* Redirect to home every other route */}
-        <Route path="*" element={Homepage} />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ErrorPage />
+            </Suspense>
+          }
+        />
       </Routes>
     </main>
   );
