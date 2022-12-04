@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { loginStateActions } from "../../../../store/inputState";
+import { useSelector } from "react-redux";
+import { loginStateActions } from "../../../../store/loginState";
 
 import logo from "../../../assets/logoIcon.png";
 // Icons
@@ -9,19 +9,12 @@ import { FiMenu } from "react-icons/fi";
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
-  const dispatch = useDispatch();
   const loginState = useSelector((state) => state.loginState.login);
 
   // Mobile menu click
   const menuActive = (evt) => {
     evt.preventDefault();
     setExpanded((prevState) => !prevState);
-  };
-
-  // Track login and sign up state
-  const loginStateHandler = (evt) => {
-    evt.preventDefault();
-    dispatch(loginStateActions.loginHandler());
   };
 
   return (
@@ -54,12 +47,9 @@ function Navigation() {
       <nav>
         {/* Navigation List */}
         <ul className={`grid nav-list ${expanded ? "active" : null}`}>
-          <li
-            className="btn-sm justify-self-end list"
-            onClick={loginStateHandler}
-          >
+          <li className="btn-sm justify-self-end list">
             <Link to="/pick-share-signup-form">
-              {!loginState ? "Signup" : "Login"}
+              {!loginState ? "Login" : "Sign up"}
             </Link>
           </li>
         </ul>
