@@ -21,6 +21,15 @@
     cursor: pointer;
   }
 
+  /* Width & Height */
+  .w-half {
+    max-width: 600px;
+  }
+
+  .h-main {
+    height: 80vh;
+  }
+
   /*----- TYPOGRAPHY-----*/
   .russo {
     font-family: var(--ff-russo);
