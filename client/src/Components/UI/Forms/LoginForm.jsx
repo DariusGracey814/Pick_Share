@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
@@ -42,13 +43,15 @@ function LoginForm() {
             Login
           </button>
 
-          <button
-            className="btn-yellow btn-login2 mt-8"
-            type="button"
-            aria-labeled="try demo"
-          >
-            Try Demo
-          </button>
+          <Link to="/pick-share-homeDarius">
+            <button
+              className="btn-yellow btn-login2 mt-8"
+              type="button"
+              aria-labeled="try demo"
+            >
+              Try Demo
+            </button>
+          </Link>
         </div>
       </form>
     </div>

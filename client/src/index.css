@@ -30,6 +30,11 @@
     font-family: var(--ff-lato);
   }
 
+  /* ------ Icons ------ */
+  .icon-mr {
+    margin-right: 0.1em;
+  }
+
   /* ----- COLORS ------ */
   .dark {
     background-color: var(--dark-clr);

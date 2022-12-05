@@ -5,6 +5,7 @@ import SignUpForm from "../src/Components/UI/Forms/SignupForm";
 
 function SignUp() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(loginStateActions.loginHandler(false));
   }, []);

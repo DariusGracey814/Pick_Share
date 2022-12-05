@@ -7,6 +7,7 @@ import Homepage from "../pages/Homepage";
 // Lazy Load for Optimization
 const SignUpPage = React.lazy(() => import("../pages/SignUp"));
 const ErrorPage = React.lazy(() => import("../pages/ErrorPage"));
+const HomeAuthenticated = React.lazy(() => import("../pages/Home"));
 
 import "./index.css";
 
@@ -26,6 +27,14 @@ function App() {
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <SignUpPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/pick-share-homeDarius"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomeAuthenticated />
             </Suspense>
           }
         />
