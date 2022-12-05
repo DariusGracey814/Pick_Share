@@ -13,7 +13,9 @@ function HomeFeed() {
 
   return (
     <section className="dark-mid w-full h-screen">
-      <h1>Home Feed</h1>
+      <Container>
+        <h1>Home Feed</h1>
+      </Container>
     </section>
   );
 }

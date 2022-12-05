@@ -36,6 +36,7 @@
   }
 
   /* ----- COLORS ------ */
+  /* Background colors */
   .dark {
     background-color: var(--dark-clr);
   }
@@ -44,6 +45,11 @@
     background-color: var(--darkMid-clr);
   }
 
+  .light-clr {
+    background-color: var(--light-clr);
+  }
+
+  /* Text colors */
   .dark-light {
     color: var(--darkLight-clr);
   }
