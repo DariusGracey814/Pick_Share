@@ -17,7 +17,7 @@ function HomeFeed() {
   return (
     <section className="light-clr w-full h-main">
       <Container>
-        <div className="grid grid-cols-2 border border-red-600 h-main mt-12">
+        <div className="grid grid-cols-2 h-main pt-10">
           <Feed />
           <div>
             <UserStats />

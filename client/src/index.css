@@ -71,10 +71,6 @@
     background-color: var(--light-clr);
   }
 
-  .light2-clr {
-    background-color: var(--light2-clr);
-  }
-
   .form-clr {
     background-color: var(--form-clr);
   }
@@ -82,6 +78,10 @@
   /* Text colors */
   .dark-light {
     color: var(--darkLight-clr);
+  }
+
+  .darkMidText {
+    color: var(--darkMid-clr);
   }
 
   .accent-dark {

@@ -3,7 +3,10 @@ import React from "react";
 function AddPost() {
   return (
     <div className="rounded-2xl box-shadow py-5">
-      <form className="login-form border border-red-600">
+      <h1 className="text-2xl darkMidText russo pb-9 text-center">
+        Share your Sports Betting Picks
+      </h1>
+      <form className="login-form">
         <div className="grid mb-3 add-posts-padd">
           <label className="text-black mb-2" htmlFor="betPlatform">
             Betting Platform:
@@ -26,7 +29,7 @@ function AddPost() {
             name="betPicks"
             id="betPicks"
             cols="20"
-            rows="8"
+            rows="7"
           ></textarea>
         </div>
 
