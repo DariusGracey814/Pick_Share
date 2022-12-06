@@ -103,6 +103,42 @@
     background-color: rgba(251, 212, 17, 0.9);
   }
 
+  /* Spinner */
+  .container-spin {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+  }
+
+  .spinner:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--darkMid-clr);
+    border-color: var(--darkMid-clr) transparent var(--darkMid-clr) transparent;
+    animation: spinner 1.2s linear infinite;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   /* --- Mobile Menu ---- */
   .mobile-menu {
     display: none;

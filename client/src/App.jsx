@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./Components/UI/Header/Header";
 import Homepage from "../pages/Homepage";
+import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 
 // Lazy Load for Optimization
 const SignUpPage = React.lazy(() => import("../pages/SignUp"));
@@ -25,7 +26,7 @@ function App() {
         <Route
           path="/pick-share-signup-form"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <SignUpPage />
             </Suspense>
           }
@@ -33,7 +34,7 @@ function App() {
         <Route
           path="/pick-share-homeDarius"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <HomeAuthenticated />
             </Suspense>
           }
@@ -43,7 +44,7 @@ function App() {
         <Route
           path="*"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <ErrorPage />
             </Suspense>
           }

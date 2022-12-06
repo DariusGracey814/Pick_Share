@@ -13,9 +13,9 @@ function HomeFeed() {
   }, []);
 
   return (
-    <section className="dark-mid w-full h-screen">
+    <section className="w-full h-screen">
       <Container>
-        <div className="pt-10 border border-red-600">
+        <div className="border border-red-600">
           <Feed />
         </div>
       </Container>
