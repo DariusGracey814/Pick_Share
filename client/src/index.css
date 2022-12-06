@@ -34,6 +34,10 @@
     height: 85vh;
   }
 
+  .add-posts-padd {
+    padding: 0 4em;
+  }
+
   /* -- Box Shadow */
   .box-shadow {
     box-shadow: 5px 12px 13px 0px rgba(232, 232, 232, 0.75);

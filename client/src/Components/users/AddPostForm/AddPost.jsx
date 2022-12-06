@@ -2,14 +2,14 @@ import React from "react";
 
 function AddPost() {
   return (
-    <div>
-      <form className="login-form mt-12">
-        <div className="grid mb-3">
+    <div className="rounded-2xl box-shadow py-5">
+      <form className="login-form border border-red-600">
+        <div className="grid mb-3 add-posts-padd">
           <label className="text-black mb-2" htmlFor="betPlatform">
             Betting Platform:
           </label>
           <input
-            className="p-2 loginInput form-clr border"
+            className="p-2 form-clr border"
             type="text"
             name="betPlatform"
             id="betPlatform"
@@ -17,12 +17,12 @@ function AddPost() {
           />
         </div>
         {/* Password */}
-        <div className="grid">
+        <div className="grid add-posts-padd">
           <label className="text-black mb-2" htmlFor="betPicks">
             Sports Picks:
           </label>
           <textarea
-            className="p-2 loginInput form-clr border"
+            className="p-2 form-clr border"
             name="betPicks"
             id="betPicks"
             cols="20"
@@ -30,7 +30,7 @@ function AddPost() {
           ></textarea>
         </div>
 
-        <div>
+        <div className="add-posts-padd">
           <button
             className="btn-yellow btn-login2 mt-8"
             type="button"
