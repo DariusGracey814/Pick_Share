@@ -6,7 +6,19 @@ function AddPost() {
       <h1 className="heading dark-mid text-white py-4 my-4 russo text-center border">
         Share your Sports Betting Picks
       </h1>
-      <form className="login-form rounded-2xl box-shadow py-4 mt-6">
+
+      {/* Mobile Button modal to add picks */}
+      <div className="add-posts-padd grid justify-center">
+        <button
+          className="btn-yellow mt-8 modal-btn"
+          type="button"
+          aria-labeled="login"
+        >
+          Share a pick now
+        </button>
+      </div>
+
+      <form className="login-form rounded-2xl box-shadow py-4 mt-6 pick-form">
         <div className="grid mb-3 add-posts-padd">
           <label className="text-black mb-2" htmlFor="betPlatform">
             Betting Platform:
