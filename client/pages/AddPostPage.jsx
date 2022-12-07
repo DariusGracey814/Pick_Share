@@ -1,10 +1,10 @@
 import React from "react";
-import AddPost from "../src/Components/users/AddPostForm/AddPost";
+import AddPostMobile from "../src/Components/users/AddPostForm/AddPostMobile";
 
 function AddPostPage() {
   return (
     <section>
-      <AddPost />
+      <AddPostMobile />
     </section>
   );
 }

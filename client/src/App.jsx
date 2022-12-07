@@ -44,7 +44,7 @@ function App() {
 
         {/* Add Bet Page */}
         <Route
-          path="/share-pick-add-bet"
+          path="/pick-share-add-bet"
           element={
             <Suspense fallback={<LoadingSpinner />}>
               <AddBetPage />

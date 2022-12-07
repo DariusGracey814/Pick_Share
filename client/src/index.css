@@ -201,6 +201,17 @@
     margin-right: 1em;
   }
 
+  .pick-input {
+    width: 100%;
+  }
+
+  .pick-back-btn {
+    font-family: var(--ff-roboto);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 2em;
+  }
+
   /* ----- HERO SECTION ------ */
   header,
   .hero {
@@ -362,6 +373,10 @@
 
     .hero-text {
       width: 95% !important;
+    }
+
+    .padd-sm {
+      padding: 0 1em !important;
     }
   }
 }

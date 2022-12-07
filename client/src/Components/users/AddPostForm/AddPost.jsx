@@ -11,13 +11,15 @@ function AddPost() {
 
       {/* Mobile Button modal to add picks */}
       <div className="add-posts-padd grid justify-center">
-        <button
-          className="btn-yellow mt-4 modal-btn"
-          type="button"
-          aria-labeled="login"
-        >
-          Share Picks
-        </button>
+        <Link to="/pick-share-add-bet">
+          <button
+            className="btn-yellow mt-4 modal-btn"
+            type="button"
+            aria-labeled="login"
+          >
+            Share Pick
+          </button>
+        </Link>
       </div>
 
       <form className="login-form rounded-2xl box-shadow py-4 mt-6 pick-form">
@@ -48,15 +50,13 @@ function AddPost() {
         </div>
 
         <div className="add-posts-padd">
-          <Link to="/share-pick-add-bet">
-            <button
-              className="btn-yellow body-btn mt-8"
-              type="button"
-              aria-labeled="login"
-            >
-              Add Picks
-            </button>
-          </Link>
+          <button
+            className="btn-yellow body-btn mt-8"
+            type="button"
+            aria-labeled="login"
+          >
+            Add Picks
+          </button>
         </div>
       </form>
     </div>
