@@ -11,11 +11,11 @@ function AddPost() {
       {/* Mobile Button modal to add picks */}
       <div className="add-posts-padd grid justify-center">
         <button
-          className="btn-yellow mt-8 modal-btn"
+          className="btn-yellow mt-4 modal-btn"
           type="button"
           aria-labeled="login"
         >
-          Share a pick now
+          Share Picks
         </button>
       </div>
 

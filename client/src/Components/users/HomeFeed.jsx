@@ -45,7 +45,7 @@ function HomeFeed() {
           <div
             className={`buckets ${
               navState ? "active" : null
-            } border border-red-600 flex flex-col justify-center items-center`}
+            } flex flex-col justify-center items-center`}
           >
             {/* Buckets */}
             <div>
