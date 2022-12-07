@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../../UI/Container/Container";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 function AddPostMobile() {
   return (
     <div>
-      <h1 className="heading dark-mid text-white px-4 russo text-center border-t">
-        <Link className="btn-sm pick-back-btn" to="/pick-share-homeDarius">
-          Go back
+      <Container>
+        <Link
+          className="darkMidText flex items-center"
+          to="/pick-share-homeDarius"
+        >
+          <IoMdArrowRoundBack /> home
         </Link>{" "}
+      </Container>
+      <h1 className="heading dark-mid text-white px-4 russo text-center border-t">
         Share your Sports Betting Picks
       </h1>
       <Container>

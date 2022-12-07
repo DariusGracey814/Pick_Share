@@ -340,7 +340,7 @@
       right: -1000px;
       display: none;
       justify-content: flex-start !important;
-      padding-top: 2em;
+      padding-top: 0.5em;
       transition: 0.5s all ease-in-out;
     }
 

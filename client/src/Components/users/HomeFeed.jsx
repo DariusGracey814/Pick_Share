@@ -21,6 +21,8 @@ function HomeFeed() {
   // Change header button to user account button when accessing this page
   useEffect(() => {
     dispatch(loginStateActions.userLoggedIn(true));
+    // Reset Navigation menu to false on each page reload
+    dispatch(navigationActions.toggleNav(false));
   }, []);
 
   return (
