@@ -16,6 +16,10 @@
     color: rgba(255, 255, 255, 0.9) !important;
   }
 
+  .heading {
+    font-size: 1.2rem;
+  }
+
   a,
   button {
     cursor: pointer;

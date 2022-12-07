@@ -5,10 +5,10 @@ import { BsFileBarGraphFill } from "react-icons/bs";
 
 function UserStats() {
   return (
-    <div className="grid grid-cols-3 gap-x-6 mb-8">
+    <div className="grid grid-cols-3 gap-x-6">
       <div className="form-clr px-10 py-6 rounded-2xl box-shadow">
         <h3 className="flex items-center justify-center mb-3">
-          <IoIosAddCircle className="text-2xl darkMidText" /> &nbsp; Post Added
+          <IoIosAddCircle className="text-2xl darkMidText" /> &nbsp; Picks Added
         </h3>
         <div className="border flex items-center justify-center py-6 px-2">
           content

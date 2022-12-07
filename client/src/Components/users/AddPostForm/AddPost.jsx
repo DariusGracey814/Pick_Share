@@ -3,7 +3,7 @@ import React from "react";
 function AddPost() {
   return (
     <div className="rounded-2xl box-shadow py-5">
-      <h1 className="text-2xl darkMidText russo pb-9 text-center">
+      <h1 className="heading dark-mid text-white py-4 my-4 russo text-center border">
         Share your Sports Betting Picks
       </h1>
       <form className="login-form">
@@ -29,7 +29,7 @@ function AddPost() {
             name="betPicks"
             id="betPicks"
             cols="20"
-            rows="7"
+            rows="6"
           ></textarea>
         </div>
 
