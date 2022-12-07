@@ -2,11 +2,11 @@ import React from "react";
 
 function AddPost() {
   return (
-    <div className="rounded-2xl box-shadow py-5">
+    <div className="">
       <h1 className="heading dark-mid text-white py-4 my-4 russo text-center border">
         Share your Sports Betting Picks
       </h1>
-      <form className="login-form">
+      <form className="login-form rounded-2xl box-shadow py-4 mt-6">
         <div className="grid mb-3 add-posts-padd">
           <label className="text-black mb-2" htmlFor="betPlatform">
             Betting Platform:

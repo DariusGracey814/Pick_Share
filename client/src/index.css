@@ -25,6 +25,11 @@
     cursor: pointer;
   }
 
+  .container {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+
   /* Width & Height */
   .w-half {
     max-width: 600px;
