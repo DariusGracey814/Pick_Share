@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 function AddPost() {
@@ -47,13 +48,15 @@ function AddPost() {
         </div>
 
         <div className="add-posts-padd">
-          <button
-            className="btn-yellow body-btn mt-8"
-            type="button"
-            aria-labeled="login"
-          >
-            Add Picks
-          </button>
+          <Link to="/share-pick-add-bet">
+            <button
+              className="btn-yellow body-btn mt-8"
+              type="button"
+              aria-labeled="login"
+            >
+              Add Picks
+            </button>
+          </Link>
         </div>
       </form>
     </div>
