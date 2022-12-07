@@ -11,7 +11,7 @@ import UserStats from "./UserStats/UserStats";
 import AddPost from "./AddPostForm/AddPost";
 
 // Icons
-import { RiMenuUnfoldFill } from "react-icons/ri";
+import { RiMenuUnfoldFill, RiCloseCircleFill } from "react-icons/ri";
 
 function HomeFeed() {
   const dispatch = useDispatch();
@@ -37,7 +37,11 @@ function HomeFeed() {
           aria-label="Toggle navigation"
           onClick={(evt) => navUtils.toggleNavHandler(evt)}
         >
-          <RiMenuUnfoldFill className="text-3xl dark-text" />
+          {!navState ? (
+            <RiMenuUnfoldFill className="text-3xl dark-text" />
+          ) : (
+            <RiCloseCircleFill className="text-3xl dark-text" />
+          )}
         </button>
 
         <div className="grid grid-cols-2 gap-x-6 pt-10 cols-1">

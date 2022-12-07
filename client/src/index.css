@@ -226,7 +226,7 @@
   }
 
   /* ----- Media Queries ------ */
-  @media (max-width: 1290px) {
+  @media (max-width: 1120px) {
     .user-stats {
       grid-template-columns: 1fr !important;
       gap: 1em !important;
