@@ -1,16 +1,22 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginStateActions } from "../../../store/loginState";
+import { navigationActions } from "../../../store/navigation";
+// Utils
+import Utils from "../../../utils/utils";
+// Components
 import Container from "../UI/Container/Container";
 import Feed from "./Feed/Feed";
 import UserStats from "./UserStats/UserStats";
 import AddPost from "./AddPostForm/AddPost";
 
 // Icons
-import { FiMenu } from "react-icons/fi";
+import { RiMenuUnfoldFill } from "react-icons/ri";
 
 function HomeFeed() {
   const dispatch = useDispatch();
+  const navUtils = new Utils(dispatch, navigationActions);
+  const navState = useSelector((state) => state.nav.show);
 
   // Change header button to user account button when accessing this page
   useEffect(() => {
@@ -27,17 +33,22 @@ function HomeFeed() {
           data-bs-toggle="collapse"
           data-bs-target="#navigationMenu"
           aria-controls="navigationMenu"
-          aria-expanded="false"
+          aria-expanded={navState}
           aria-label="Toggle navigation"
+          onClick={(evt) => navUtils.toggleNavHandler(evt)}
         >
-          <FiMenu className="text-3xl darkMidText" />
+          <RiMenuUnfoldFill className="text-3xl dark-text" />
         </button>
 
-        <div className="grid grid-cols-2 gap-x-6 h-main pt-10">
+        <div className="grid grid-cols-2 gap-x-6 pt-10 cols-1">
           <Feed />
-          <div className="border border-red-600 flex flex-col">
+          <div
+            className={`buckets ${
+              navState ? "active" : null
+            } border border-red-600 flex flex-col justify-center items-center`}
+          >
             {/* Buckets */}
-            <div className="">
+            <div>
               <UserStats />
               <AddPost />
             </div>

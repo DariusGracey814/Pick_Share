@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function AddPost() {
   return (
-    <div className="">
+    <div>
       <h1 className="heading dark-mid text-white px-4 my-4 russo text-center border">
         Share your Sports Betting Picks
       </h1>

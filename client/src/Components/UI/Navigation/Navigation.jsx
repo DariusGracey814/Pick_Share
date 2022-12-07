@@ -18,7 +18,7 @@ function Navigation() {
       <Link to={userAccess ? "/pick-share-homeDarius" : "/"}>
         <div className="flex justify-items-center items-center">
           <img src={logo} alt="logo icon" width="27" height="23" />
-          <p className="uppercase russo font-bold text-base">
+          <p className="uppercase russo font-bold text-base logo-text">
             <span className="dark-light">Pick</span>
             <span className="accent-dark">Share</span>
           </p>
