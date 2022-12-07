@@ -9,6 +9,7 @@ import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 const SignUpPage = React.lazy(() => import("../pages/SignUp"));
 const ErrorPage = React.lazy(() => import("../pages/ErrorPage"));
 const HomeAuthenticated = React.lazy(() => import("../pages/Home"));
+const AddBetPage = React.lazy(() => import("../pages/AddPostPage"));
 
 import "./index.css";
 
@@ -31,11 +32,22 @@ function App() {
             </Suspense>
           }
         />
+        {/* Authenticated Homepage */}
         <Route
           path="/pick-share-homeDarius"
           element={
             <Suspense fallback={<LoadingSpinner />}>
               <HomeAuthenticated />
+            </Suspense>
+          }
+        />
+
+        {/* Add Bet Page */}
+        <Route
+          path="/share-pick-add-bet"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <AddBetPage />
             </Suspense>
           }
         />
