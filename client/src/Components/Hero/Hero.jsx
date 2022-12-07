@@ -21,6 +21,9 @@ function Hero() {
             </p>
           </div>
           {/* Login Form (include demo account) */}
+          <p className="accent-dark m-0 pt-4 demo">
+            Click try demo to access demo account
+          </p>
           <div>
             <LoginForm />
           </div>

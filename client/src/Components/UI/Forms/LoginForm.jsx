@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 function LoginForm() {
   return (
     <div>
-      <p className="accent-dark m-0 pt-4">
-        Click try demo to access demo account
-      </p>
       <form className="login-form mt-12">
         <div className="grid mb-3">
           <label className="text-white mb-2" htmlFor="userEmail">
@@ -34,7 +31,7 @@ function LoginForm() {
           />
         </div>
 
-        <div>
+        <div className="login-btn-wrapper">
           <button
             className="btn-yellow btn-login2 mt-8"
             type="button"

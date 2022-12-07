@@ -274,6 +274,22 @@
       width: 80% !important;
     }
 
+    .demo {
+      text-align: center;
+    }
+
+    .login-btn-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 1.5em;
+    }
+
+    .btn-login2 {
+      padding: 0.8em 0.6em;
+      width: 100%;
+      margin: 0 0 1em 0 !important;
+    }
+
     .btn-sm {
       font-size: 0.9rem !important;
     }
