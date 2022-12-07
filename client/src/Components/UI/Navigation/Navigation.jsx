@@ -5,19 +5,11 @@ import { loginStateActions } from "../../../../store/loginState";
 import { FaUserCircle } from "react-icons/fa";
 
 import logo from "../../../assets/logoIcon.png";
-// Icons
-import { FiMenu } from "react-icons/fi";
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
   const loginState = useSelector((state) => state.loginState.login);
   const userAccess = useSelector((state) => state.loginState.userAccess);
-
-  // Mobile menu click
-  const menuActive = (evt) => {
-    evt.preventDefault();
-    setExpanded((prevState) => !prevState);
-  };
 
   return (
     <div className="grid grid-cols-2 items-center">
@@ -33,23 +25,9 @@ function Navigation() {
         </div>
       </Link>
 
-      {/* Mobile Menu */}
-      <button
-        className="mobile-menu justify-self-end"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navigationMenu"
-        aria-controls="navigationMenu"
-        aria-expanded={expanded}
-        aria-label="Toggle navigation"
-        onClick={menuActive}
-      >
-        <FiMenu className="text-4xl accent-dark" />
-      </button>
-
       <nav>
         {/* Navigation List */}
-        <ul className={`grid nav-list ${expanded ? "active" : null}`}>
+        <ul className="grid nav-list">
           {/* If user has access to page show account btn else login or sign up btn */}
           {userAccess ? (
             <li className="btn-sm justify-self-end list">

@@ -288,6 +288,19 @@
     .btn-login {
       width: 100%;
     }
+
+    .mobile-menu {
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+
+    .buckets-home {
+    }
+
+    .posts {
+      width: 100% !important;
+    }
   }
 
   @media (max-width: 540px) {

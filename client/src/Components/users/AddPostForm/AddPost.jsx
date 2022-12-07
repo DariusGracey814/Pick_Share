@@ -1,9 +1,10 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function AddPost() {
   return (
     <div className="">
-      <h1 className="heading dark-mid text-white py-4 my-4 russo text-center border">
+      <h1 className="heading dark-mid text-white px-4 my-4 russo text-center border">
         Share your Sports Betting Picks
       </h1>
 
@@ -47,7 +48,7 @@ function AddPost() {
 
         <div className="add-posts-padd">
           <button
-            className="btn-yellow btn-login2 mt-8"
+            className="btn-yellow body-btn mt-8"
             type="button"
             aria-labeled="login"
           >
