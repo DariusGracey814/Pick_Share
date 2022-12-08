@@ -6,6 +6,7 @@
     "build:dev": "webpack",
     "tailwind:dev": "npx tailwindcss -i ./src/index.css -o ./dist/style.css --watch"
   },
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/plugin-transform-runtime": "^7.19.6",
