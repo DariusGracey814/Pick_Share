@@ -15,3 +15,5 @@ class Validation {
     console.log(result);
   }
 }
+
+export default Validation;
