@@ -7,12 +7,9 @@ class Validation {
     }
   }
 
-  // validate email
-  validateEmail(email) {
+  // validate password
+  validatePassword(email) {
     const regex = /^[a-z-\' ]{1,50}/;
     const result = email.match(regex);
   }
-
-  // validate email
-  validatePassword(password) {}
 }
