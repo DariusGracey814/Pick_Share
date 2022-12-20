@@ -3,6 +3,7 @@ class Validation {
   validateInput(regex, value) {
     switch (regex) {
       case "password":
+        this.validatePassword(value);
         break;
     }
   }
@@ -11,5 +12,6 @@ class Validation {
   validatePassword(email) {
     const regex = /^[a-z-\' ]{1,50}/;
     const result = email.match(regex);
+    console.log(result);
   }
 }
