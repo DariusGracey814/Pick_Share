@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
+  // Form refs
+  const email = useRef(null);
+  const password = useRef(null);
+
   return (
     <div>
       <form className="login-form mt-12">
@@ -14,6 +18,7 @@ function LoginForm() {
             type="email"
             name="email"
             id="email"
+            ref={email}
             required
           />
         </div>
@@ -27,6 +32,7 @@ function LoginForm() {
             type="password"
             name="password"
             id="password"
+            ref={password}
             required
           />
         </div>
@@ -40,7 +46,7 @@ function LoginForm() {
             Login
           </button>
 
-          <Link to="/pick-share-homeDarius">
+          <Link to="/">
             <button
               className="btn-yellow btn-login2 mt-8"
               type="button"
