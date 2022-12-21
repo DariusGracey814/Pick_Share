@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 function SignUpForm() {
+  const [username, setUsername] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  console.log(username);
+  console.log(userEmail);
+  console.log(userPassword);
+
+  const userName = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
+  const rePassword = useRef(null);
+
+  // Sign up Handler
+  const signupHandler = (evt) => {
+    evt.preventDefault();
+
+    // Set sign up form data
+    setUsername(userName.current.value);
+    setUserEmail(email.current.value);
+    setUserPassword(password.current.value);
+  };
+
   return (
     <div>
       <div className="hero-content">
@@ -25,6 +48,7 @@ function SignUpForm() {
             type="text"
             name="fullName"
             id="fullName"
+            ref={userName}
             required
           />
         </div>
@@ -38,6 +62,7 @@ function SignUpForm() {
             type="email"
             name="email"
             id="email"
+            ref={email}
             required
           />
         </div>
@@ -51,6 +76,7 @@ function SignUpForm() {
             type="password"
             name="password"
             id="password"
+            ref={password}
             required
           />
         </div>
@@ -65,11 +91,16 @@ function SignUpForm() {
             type="password"
             name="rePassword"
             id="rePassword"
+            ref={rePassword}
             required
           />
         </div>
 
-        <button className="btn-yellow btn-login mt-8" type="button">
+        <button
+          className="btn-yellow btn-login mt-8"
+          type="button"
+          onClick={signupHandler}
+        >
           Sign up
         </button>
       </form>

@@ -1,11 +1,26 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import 
+import Validation from "../../../../classes/validation";
 
 function LoginForm() {
+  const validate = new Validation();
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  console.log(userEmail);
+  console.log(userPassword);
+
   // Form refs
   const email = useRef(null);
   const password = useRef(null);
+
+  // Login
+  const loginHandler = (evt) => {
+    evt.preventDefault();
+    // Set Login Data
+    setUserEmail(email.current.value);
+    setUserPassword(password.current.value);
+  };
 
   return (
     <div>
@@ -43,6 +58,7 @@ function LoginForm() {
             className="btn-yellow btn-login2 mt-8"
             type="button"
             aria-labeled="login"
+            onClick={loginHandler}
           >
             Login
           </button>
