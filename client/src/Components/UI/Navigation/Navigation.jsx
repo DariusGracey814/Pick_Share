@@ -41,7 +41,7 @@ function Navigation() {
           ) : (
             <li className="btn-sm justify-self-end list">
               <Link to={!loginState ? "/" : "/pick-share-signup-form"}>
-                {!loginState ? "Login" : "Sign up"}
+                {!loginState ? "Login" : "Register"}
               </Link>
             </li>
           )}
