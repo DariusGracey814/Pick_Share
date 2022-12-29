@@ -28,9 +28,7 @@ function SignUpForm() {
     <div>
       <div className="hero-content">
         <h1 className="text-5xl text-white font-bold pt-8 loginHeading">
-          Get the <span className="accent-dark">latest sports picks</span>{" "}
-          shared by the sports betting{" "}
-          <span className="accent-dark">community</span>.
+          Get the <span className="accent-dark">latest sports picks</span>
         </h1>
         <p className="text-white text-lg mt-4 max-w-lg hero-text">
           Sign up now to access and share picks while keeping track of your
