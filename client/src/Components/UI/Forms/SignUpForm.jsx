@@ -101,7 +101,7 @@ function SignUpForm() {
           type="button"
           onClick={signupHandler}
         >
-          Sign up
+          Register
         </button>
       </form>
     </div>
