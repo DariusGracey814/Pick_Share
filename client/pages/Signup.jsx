@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { loginStateActions } from "../store/loginState";
 import SignUpForm from "../src/Components/UI/Forms/SignupForm";
-import Container from "../src/Components/UI/Container";
+import Container from "../src/Components/UI/Container/Container";
 
 function SignUp() {
   const dispatch = useDispatch();
