@@ -12,7 +12,7 @@ function Homepage() {
   }, []);
 
   return (
-    <section className="h-3/6">
+    <section className="hero">
       <Hero />
     </section>
   );
