@@ -35,6 +35,7 @@ function LoginForm() {
             name="email"
             id="email"
             ref={email}
+            value={userEmail ? userEmail : ""}
             required
           />
         </div>
@@ -49,6 +50,7 @@ function LoginForm() {
             name="password"
             id="password"
             ref={password}
+            value={userPassword ? userPassword : ""}
             required
           />
         </div>
