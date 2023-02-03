@@ -3,11 +3,13 @@ import React, { useState, useRef } from "react";
 function SignUpForm() {
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [userPassword, setUserPassword] = useState(null);
+  const [reUserPassword, setReUserPassword] = useState(null);
 
   console.log(username);
   console.log(userEmail);
   console.log(userPassword);
+  console.log(reUserPassword);
 
   const userName = useRef(null);
   const email = useRef(null);
@@ -22,6 +24,7 @@ function SignUpForm() {
     setUsername(userName.current.value);
     setUserEmail(email.current.value);
     setUserPassword(password.current.value);
+    setReUserPassword(rePassword.current.value);
   };
 
   return (

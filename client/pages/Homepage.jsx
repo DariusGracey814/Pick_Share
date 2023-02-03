@@ -11,11 +11,7 @@ function Homepage() {
     dispatch(loginStateActions.loginHandler(true));
   }, []);
 
-  return (
-    <section className="h-3/6">
-      <Hero />
-    </section>
-  );
+  return <section className="h-3/6">{<Hero />}</section>;
 }
 
 export default Homepage;

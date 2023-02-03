@@ -1,30 +1,39 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { formDataActions } from "../../../../store/formData";
 import { Link } from "react-router-dom";
-import Validation from "../../../../classes/validation";
 
 function LoginForm() {
-  const validate = new Validation();
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
-  console.log(userEmail);
-  console.log(userPassword);
+  const dispatch = useDispatch();
+  const userEmail1 = useSelector((state) => state.formData.email);
+  const userPassword1 = useSelector((state) => state.formData.password);
+
+  useEffect(() => {
+    console.log(userEmail1);
+    console.log(userPassword1);
+  }, [userEmail1, userPassword1]);
 
   // Form refs
   const email = useRef(null);
   const password = useRef(null);
 
-  // Login
-  const loginHandler = (evt) => {
+  function loginHandler(evt) {
     evt.preventDefault();
-    // Set Login Data
-    setUserEmail(email.current.value);
-    setUserPassword(password.current.value);
-  };
 
+    // Pass data to formDataCheck redux slice
+    dispatch(formDataActions.enteredEmail(email.current.value));
+    dispatch(formDataActions.enteredPassword(password.current.value));
+
+    // get values
+  }
+
+  // Login
   return (
     <div>
-      <form className="login-form mt-12">
+      <form className="login-form mt-12" onSubmit={loginHandler}>
         <div className="grid mb-3">
           <label className="text-white mb-2" htmlFor="userEmail">
             Email Address:
@@ -35,7 +44,6 @@ function LoginForm() {
             name="email"
             id="email"
             ref={email}
-            value={userEmail ? userEmail : ""}
             required
           />
         </div>
@@ -50,27 +58,17 @@ function LoginForm() {
             name="password"
             id="password"
             ref={password}
-            value={userPassword ? userPassword : ""}
             required
           />
         </div>
 
         <div className="login-btn-wrapper">
-          <button
-            className="btn-yellow btn-login2 mt-8"
-            type="button"
-            aria-labeled="login"
-            onClick={loginHandler}
-          >
+          <button className="btn-yellow btn-login2 mt-8" type="submit">
             Login
           </button>
 
           <Link to="/">
-            <button
-              className="btn-yellow btn-login2 mt-8"
-              type="button"
-              aria-labeled="try demo"
-            >
+            <button className="btn-yellow btn-login2 mt-8" type="button">
               Try Demo
             </button>
           </Link>
